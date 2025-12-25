@@ -1,0 +1,90 @@
+.component-wrapper {
+    background: #001b35;
+    min-height: 100%;
+}
+
+.character-thumbnail {
+    position: relative;
+    border: solid 1px white;
+    padding: 5px;
+    cursor:pointer;
+    transition: transform 0.1s ease-in;
+}
+
+.character-thumbnail-img {
+    position:relative;
+    width:100%;
+    border: solid 1px white;
+}
+
+.character-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background-color: rgba(11, 11, 11, 0.868);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: "Roboto";
+    padding-bottom: 0px;
+    margin-bottom:5px;
+    text-align: center;
+    transition: display 0.3s ;
+}
+
+.character-thumbnail:hover {
+    transform: scale(1.1);
+    border: none;
+    z-index: 4;
+}
+.character-thumbnail:hover > .character-thumbnail-img {
+    border: solid 5px white;
+}
+.character-thumbnail:hover > .character-name {
+    display:none;
+}
+
+@media (max-width: 1200px) {
+    .character-name {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 992px){
+    .character-name{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767px){
+    .character-name{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 510px){
+    .character-name{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 451px){
+    .character-name{
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 410px){
+    .character-name{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 375px){
+    .character-name{
+        font-size: 0.7rem;
+    }
+}
