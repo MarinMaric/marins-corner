@@ -1,0 +1,39 @@
+* {
+    color:white !important;
+    white-space: pre-line;
+    text-align: justify;
+}
+
+h2{
+    text-transform: uppercase;
+    padding-left: 2rem;
+}
+
+.table-of-contents li{
+    list-style: none;
+    margin-bottom:8px;
+    cursor:pointer;
+}
+
+.decklist-image{
+    width:100%;
+}
+.decklist-link{
+    cursor:pointer;
+}
+
+.combo-card{
+    width:90px;
+}
+
+.matchup-title{
+    font-size:20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.matchup-description img{
+    float:right;
+    border:solid 1px white;
+    width: 90px;
+    margin-left:10px;
+}

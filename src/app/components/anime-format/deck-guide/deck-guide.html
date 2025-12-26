@@ -1,0 +1,80 @@
+<div class="component-wrapper px-2">
+    @if(guide!=null){
+        <div class="container py-4">
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="col-6 col-md-2 col-lg-2 col-xl-2">
+                    <img [src]="guide.thumbnailUrl" class="character-thumbnail-img">
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="mb-5">{{guide.title}}</h2>
+                    <ul class="table-of-contents">
+                        <li (click)="scrollTo('decklist')">Decklist</li>
+                        @if(guide.general != ''){
+                            <li (click)="scrollTo('general')">General</li>
+                        }
+                        @if(guide.combos.length != 0){
+                            <li (click)="scrollTo('combos')">Combos</li>
+                        }
+                        @if(guide.mathchups.length != 0){
+                            <li (click)="scrollTo('matchups')">Matchups</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <h3 id="decklist">DECKLIST</h3>
+                <hr>
+                <img [src]="guide.deckListLink" class="decklist-image px-2">
+                <p>
+                    <span class="decklist-link">
+                        View on Duelingbook
+                    </span>
+                </p>
+            </div>
+
+            @if(guide.general!=''){
+                <div class="row mb-4">
+                    <h3 id="general">GENERAL</h3>
+                    <hr>
+                    <p>{{guide.general}}</p>
+                </div>
+            }
+
+            @if(guide.combos.length!=0){
+                <div class="row mb-4">
+                    <h3 id="combos">COMBOS</h3>
+                    <hr>
+                    
+                    @for(combo of guide.combos; track $index){
+                        <h4>{{combo.cardNames}}</h4>
+                        <div class="row">
+                            @for(image of combo.cardUrls; track $index){
+                                <img [src]="image" class="combo-card mx-2">
+                            }
+                        </div>
+                        <p>{{combo.description}}</p>
+                    }
+                </div>
+            }
+
+
+            @if(guide.mathchups.length != 0){
+                <div class="row mb-4">
+                    <h3 id="matchups">MATCHUPS</h3>
+                    <hr>
+                    @for(matchup of guide.mathchups; track $index){
+                        <div class="matchup-description mb-3">
+                            <img [src]="matchup.imageUrl">
+                            <p>
+                                <span class="matchup-title">{{matchup.title}}</span><br>
+                                {{matchup.description}}
+                            </p>
+                        </div>
+                    }
+                </div>
+            }
+
+        </div>
+    }
+</div>

@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+.component-wrapper {
+    background: #001b35;
+    min-height: 100vh;
+}
+
+.character-thumbnail {
+    position: relative;
+    border: solid 1px white;
+    padding: 5px !important;
+    transition: transform 0.1s ease-in;
+}
+
+.character-thumbnail-img {
+    position:relative;
+    width:100%;
+    border: solid 1px white;
+}
+
+h2{
+    text-transform: capitalize;
+}

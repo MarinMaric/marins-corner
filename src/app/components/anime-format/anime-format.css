@@ -1,22 +1,3 @@
-.component-wrapper {
-    background: #001b35;
-    min-height: 100%;
-}
-
-.character-thumbnail {
-    position: relative;
-    border: solid 1px white;
-    padding: 5px;
-    cursor:pointer;
-    transition: transform 0.1s ease-in;
-}
-
-.character-thumbnail-img {
-    position:relative;
-    width:100%;
-    border: solid 1px white;
-}
-
 .character-name {
     position: absolute;
     bottom: 0;
@@ -39,6 +20,7 @@
     transform: scale(1.1);
     border: none;
     z-index: 4;
+    cursor:pointer;
 }
 .character-thumbnail:hover > .character-thumbnail-img {
     border: solid 5px white;

@@ -1,67 +1,12 @@
-<div class="component-wrapper">
-    <div class="container" style="padding: 5rem">
-
+<div class="component-wrapper px-2 ">
+    <div class="container py-4">
         <div class="row">
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail" id="yugi">
-                <img src="https://i.imgur.com/T9q3eBX.png"  class="character-thumbnail-img">
-                <p class="character-name">Atem</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail" id="kaiba">
-                <img src="https://i.imgur.com/u500jF5.png"  class="character-thumbnail-img">
-                <p class="character-name">Kaiba</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail" id="joey">
-                <img src="https://i.imgur.com/GMhHJ8Q.png"  class="character-thumbnail-img">
-                <p class="character-name">Joey</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail" id="joey">
-                <img src="https://i.imgur.com/VgQbHf7.png"  class="character-thumbnail-img">
-                <p class="character-name">Jaden</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail" id="joey">
-                <img src="https://i.imgur.com/lFAsOca.png"  class="character-thumbnail-img">
-                <p class="character-name">Chazz</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail" id="joey">
-                <img src="https://i.imgur.com/yw4KAJj.png"  class="character-thumbnail-img">
-                <p class="character-name">Jessie</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail">
-                <img src="https://i.imgur.com/W1wcL7S.png"  class="character-thumbnail-img">
-                <p class="character-name">Zane</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail">
-                <img src="https://i.imgur.com/r1ePgDn.png"  class="character-thumbnail-img">
-                <p class="character-name">Yusei</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail">
-                <img src="https://i.imgur.com/Lucm6ze.png"  class="character-thumbnail-img">
-                <p class="character-name">Jack</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail">
-                <img src="https://i.imgur.com/KAM51Ks.png"  class="character-thumbnail-img">
-                <p class="character-name">Playmaker</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail">
-                <img src="https://i.imgur.com/hUlodVY.png"  class="character-thumbnail-img">
-                <p class="character-name">Soulburner</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail">
-                <img src="https://i.imgur.com/4oy9U3Q.png"  class="character-thumbnail-img">
-                <p class="character-name">Revolver</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail">
-                <img src="https://i.imgur.com/IUcNs5w.png"  class="character-thumbnail-img">
-                <p class="character-name">Yugi (DSOD)</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail">
-                <img src="https://i.imgur.com/h0SRmEO.png"  class="character-thumbnail-img">
-                <p class="character-name">Kaiba (DSOD)</p>
-            </div>
-            <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail">
-                <img src="https://i.imgur.com/omK37q2.png"  class="character-thumbnail-img">
-                <p class="character-name">Bakura</p>
-            </div>
+            @for (guide of guides; track $index) {
+                <div class="col-6 col-md-3 col-lg-3 col-xl-3 character-thumbnail" (click)="openGuide(guide)">
+                    <img [src]="guide.thumbnailUrl"  class="character-thumbnail-img">
+                    <p class="character-name">{{guide.title}}</p>
+                </div>
+            }
         </div>
     </div>
 </div>
