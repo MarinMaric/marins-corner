@@ -8,6 +8,7 @@ export class DeckGuideService {
         let atem = new DeckGuide();
         atem.title = "Yugi";
         atem.thumbnailUrl = "https://i.imgur.com/T9q3eBX.png";
+        atem.deckListLink = "https://www.duelingbook.com/deck?id=19270748";
         atem.general = "The heart of the deck is the Dark Magician and Buster Blader duo. They are the main beaters you will want to go to, and the rest of the cards are mostly there to maintain field presence until you get to them. Skilled Dark Magician, Gold Sarchophagus, Dark Magic Curtain, and Emblem of the Dragon Destroyer are used to search for these two, respectively, if the ample amount of draw power doesn’t get to them first (Pot of Greed, Graceful Charity, and Card Destruction).\n \nMagnet Warriors, Knights, and the Gazelle/Berfomet duo are also here; however, they are most often used for maintaining field presence while you get to Dark Magician or Buster Blader. Summoning Valkyrion is not very likely, so do not focus on that unless the circumstances are such that you have a high chance of getting to the third Magnet Warrior. Valkyrion is thus mostly used as a discard fodder as he is a “Garnet” of the deck.";
         atem.combos=[];
         atem.mathchups = [
@@ -21,6 +22,7 @@ export class DeckGuideService {
         let kaiba = new DeckGuide();
         kaiba.title = "Kaiba";
         kaiba.thumbnailUrl = "https://i.imgur.com/u500jF5.png";
+        kaiba.deckListLink = "https://www.duelingbook.com/deck?id=19270771";
         kaiba.mathchups = [
             {title:'Yugi', imageUrl:'https://i.imgur.com/T9q3eBX.png', description:"The biggest threat is Buster Blader. Save effect removals for him and Paladin. Shrink can also be used to either run him over or wait for Blader to attack. Do not carelessly commit to a dragon presence unless you have a way to deal with Buster Blader at hand.\n\nYugi has 3 S/T cards that can revive blader so returning him to hand with Kaiser Glider can be preferable if you have other beatsticks since Yugi won't easily get 2 tributes for it. Sometimes crashing with Glider is the better option. \n\nA powerful move is to use Soul Release after destroying Blader to banish him from GY, getting rid of him permanently. Be careful of Mirror Force and use Interdimensional Matter Transporter to dodge it and other removal effects. Keep track of your LP because of Magic Cylinder. "}
         ];
@@ -28,42 +30,52 @@ export class DeckGuideService {
         let joey = new DeckGuide();
         joey.title = "Joey";
         joey.thumbnailUrl = "https://i.imgur.com/GMhHJ8Q.png";
+        joey.deckListLink = "https://www.duelingbook.com/deck?id=19271026";
 
         let jaden = new DeckGuide();
         jaden.title = "Jaden";
         jaden.thumbnailUrl = "https://i.imgur.com/VgQbHf7.png";
+        jaden.deckListLink = "https://www.duelingbook.com/deck?id=19270880";
 
         let chazz = new DeckGuide();
         chazz.title = "Chazz";
         chazz.thumbnailUrl = "https://i.imgur.com/lFAsOca.png";
+        chazz.deckListLink = "https://www.duelingbook.com/deck?id=19270773";
 
         let jessie = new DeckGuide();
         jessie.title = "Jessie";
         jessie.thumbnailUrl = "https://i.imgur.com/yw4KAJj.png";
+        jessie.deckListLink = "https://www.duelingbook.com/deck?id=19271116";
 
         let zane = new DeckGuide();
         zane.title = "Zane";
         zane.thumbnailUrl = "https://i.imgur.com/W1wcL7S.png";
+        zane.deckListLink = "https://www.duelingbook.com/deck?id=19271077";
 
         let yusei = new DeckGuide();
         yusei.title = "Yusei";
         yusei.thumbnailUrl = "https://i.imgur.com/r1ePgDn.png";
+        yusei.deckListLink = "https://www.duelingbook.com/deck?id=19270945";
 
         let jack = new DeckGuide();
         jack.title = "Jack";
         jack.thumbnailUrl = "https://i.imgur.com/Lucm6ze.png";
+        jack.deckListLink = "https://www.duelingbook.com/deck?id=19271000";
 
         let playmaker = new DeckGuide();
         playmaker.title = "Playmaker";
         playmaker.thumbnailUrl = "https://i.imgur.com/KAM51Ks.png";
+        playmaker.deckListLink = "https://www.duelingbook.com/deck?id=19271155";
 
         let soulburner = new DeckGuide();
         soulburner.title = "Soulburner";
         soulburner.thumbnailUrl = "https://i.imgur.com/hUlodVY.png";
+        soulburner.deckListLink = "https://www.duelingbook.com/deck?id=19271232";
 
         let revolver = new DeckGuide();
         revolver.title = "Revolver";
         revolver.thumbnailUrl = "https://i.imgur.com/4oy9U3Q.png";
+        revolver.deckListLink = "https://www.duelingbook.com/deck?id=19271196";
 
         let yugiDsod = new DeckGuide();
         yugiDsod.title = "Yugi (DSOD)";
