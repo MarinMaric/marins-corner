@@ -1,6 +1,9 @@
-<div class="component-wrapper px-2">
+<div class="component-wrapper px-2"  id="firstElement">
     @if(guide!=null){
         <div class="container py-4">
+            <div class="row mb-2">
+                <p routerLink="/anime-format" style="cursor:pointer"><i class="bi bi-caret-left-fill"></i> Back to character select</p>
+            </div>
             <div class="row d-flex justify-content-center mb-5">
                 <div class="col-6 col-md-2 col-lg-2 col-xl-2">
                     <img [src]="guide.thumbnailUrl" class="character-thumbnail-img">
@@ -8,30 +11,34 @@
                 <div class="col-6 col-md-3">
                     <h2 class="mb-5">{{guide.title}}</h2>
                     <ul class="table-of-contents">
-                        <li (click)="scrollTo('decklist')">Decklist</li>
+                        @if(guide.deckListLink != ''){
+                            <li (click)="scrollTo('decklist')"><i class="bi bi-caret-right-fill"></i> Decklist</li>
+                        }
                         @if(guide.general != ''){
-                            <li (click)="scrollTo('general')">General</li>
+                            <li (click)="scrollTo('general')"><i class="bi bi-caret-right-fill"></i> General</li>
                         }
                         @if(guide.combos.length != 0){
-                            <li (click)="scrollTo('combos')">Combos</li>
+                            <li (click)="scrollTo('combos')"><i class="bi bi-caret-right-fill"></i> Combos</li>
                         }
                         @if(guide.mathchups.length != 0){
-                            <li (click)="scrollTo('matchups')">Matchups</li>
+                            <li (click)="scrollTo('matchups')"><i class="bi bi-caret-right-fill"></i> Matchups</li>
                         }
                     </ul>
                 </div>
             </div>
             
-            <div class="row mb-4">
-                <h3 id="decklist">DECKLIST</h3>
-                <hr>
-                <!-- <img [src]="guide.deckListLink" class="decklist-image px-2"> -->
-                <p>
-                    <span class="decklist-link">
-                        <a [href]="guide.deckListLink" target="_blank">View on Duelingbook <i class="bi bi-globe2"></i></a>
-                    </span>
-                </p>
-            </div>
+            @if(guide.deckListLink!=''){
+                <div class="row mb-4">
+                    <h3 id="decklist">DECKLIST</h3>
+                    <hr>
+                    <!-- <img [src]="guide.deckListLink" class="decklist-image px-2"> -->
+                    <p>
+                        <span class="decklist-link">
+                            <a [href]="guide.deckListLink" target="_blank"><i class="bi bi-globe2 px-1"></i> View on Duelingbook</a>
+                        </span>
+                    </p>
+                </div>
+            }
 
             @if(guide.general!=''){
                 <div class="row mb-4">
@@ -75,6 +82,9 @@
                 </div>
             }
 
+            <div class="row mb-2">
+                <p id="backToTop" (click)="scrollTo('firstElement')">Back to top <i class="bi bi-caret-up-fill"></i></p>
+            </div>
         </div>
     }
 </div>

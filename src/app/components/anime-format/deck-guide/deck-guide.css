@@ -42,3 +42,8 @@ h2{
     width: 90px;
     margin-left:10px;
 }
+
+#backToTop{
+    cursor: pointer;
+    text-align: end;;
+}

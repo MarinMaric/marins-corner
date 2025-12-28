@@ -1,10 +1,10 @@
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { DeckGuide } from '../../../models/deck-guide.model';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-deck-guide',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './deck-guide.html',
   styleUrl: './deck-guide.css',
 })
