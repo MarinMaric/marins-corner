@@ -92,14 +92,17 @@ export class DeckGuideService {
         let yugiDsod = new DeckGuide();
         yugiDsod.title = "Yugi (DSOD)";
         yugiDsod.thumbnailUrl = "https://i.imgur.com/IUcNs5w.png";
+        yugiDsod.deckListLink = "https://www.duelingbook.com/deck?id=19314910";
 
         let kaibaDsod = new DeckGuide();
         kaibaDsod.title = "Kaiba (DSOD)";
         kaibaDsod.thumbnailUrl = "https://i.imgur.com/h0SRmEO.png";
+        kaibaDsod.deckListLink = "https://www.duelingbook.com/deck?id=19314895";
 
         let bakura = new DeckGuide();
         bakura.title = "Bakura";
         bakura.thumbnailUrl = "https://i.imgur.com/omK37q2.png";
+        bakura.deckListLink = "https://www.duelingbook.com/deck?id=19314851";
 
         let guides = [
             atem, kaiba, joey, jaden, chazz, jessie, zane, yusei, jack, playmaker, soulburner, revolver, yugiDsod, kaibaDsod, bakura
